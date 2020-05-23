@@ -7,7 +7,7 @@
     <li class="p-related__item js-related__item">
       <a href="{{ .RelPermalink }}"
         {{ with .Params.thumbnail }}
-          style="background-image: url({{ $.Site.BaseURL }}{{ . }});"
+          style="background-image: url({{ . }});"
         {{ end }}>
         <span>{{ .Title }}</span>
       </a>
