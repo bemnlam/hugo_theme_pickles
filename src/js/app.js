@@ -51,8 +51,19 @@ $(() => {
   $('.c-tag').trigger('mouseleave')
 
   function setColor ($target, h, l) {
-    console.debug(`hsl(${h}, 85%, ${l}%)`)
+    // console.debug(`hsl(${h}, 85%, ${l}%)`)
     $target.css('color', `hsl(${h}, 85%, ${l}%)`)
     // $target.css('background-color', `hsl(${h + (360 / 2)}, 85%, ${bgl}%)`)
   }
+})
+
+$(() => {
+  $('a[href]').each(function () {
+    var thisUrl = $(this).attr('href')
+    console.debug(thisUrl)
+    if ((thisUrl.startsWith('http://') && !thisUrl.startsWith(`http://${window.location.host}`)) ||
+        (thisUrl.startsWith('https://') && !thisUrl.startsWith(`https://${window.location.host}`))) {
+      $(this).attr('target', '_blank').attr('ref', 'nofollow')
+    }
+  })
 })
