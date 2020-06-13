@@ -6,8 +6,8 @@
     {{ range . }}
     <li class="p-related__item js-related__item">
       <a href="{{ .RelPermalink }}"
-        {{ with .Params.thumbnail }}
-          style="background-image: url({{ . }});"
+        {{ with .Params.thumbnail | default ($.Param "logo") }}
+          style="background-image: url({{ . | absURL }});"
         {{ end }}>
         <span>{{ .Title }}</span>
       </a>
