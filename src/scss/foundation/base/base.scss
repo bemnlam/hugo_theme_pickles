@@ -45,6 +45,10 @@ h5 {
 
 h6 {
   font-size: 1.6rem;
+  color: #999;
+  // reset the margin
+  margin: 0 0 0 0;
+  margin-top: revert;
 }
 
 p {
