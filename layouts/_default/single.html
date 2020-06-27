@@ -10,6 +10,13 @@
           {{ .Date.Format "Jan 2, 2006" }}
         </time>
       </div>
+      {{ if .Params.tags }}
+      <div>
+        {{ range .Params.tags }}
+          <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="c-tag">{{ . }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
     </div>
   </header>
   {{ with .Params.thumbnail }}
@@ -18,13 +25,6 @@
   <section id="js-article" class="p-article__body">
     {{ .Content }}
   </section>
-  {{ if .Params.tags }}
-  <p>tags:
-    {{ range .Params.tags }}
-      <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="c-tag">{{ . }}</a>
-    {{ end }}
-  </p>
-  {{ end }}
   <footer>
     {{ with ($.Param "disqus") }}
     <div id="disqus_thread"></div>
