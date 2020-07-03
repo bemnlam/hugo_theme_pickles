@@ -151,23 +151,3 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-aside {
-  background-color: #efefef;
-  padding: 10px;
-
-  summary {
-    font-weight: 300;
-    font-family: $OpenSans;
-    // same as h3
-    font-size: 2.4rem;
-  }
-
-  details summary::marker {
-    content: '📘 ';
-  }
-  details[open] summary::marker {
-    content: '📖 ';
-  }
-
-}
