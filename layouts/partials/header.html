@@ -13,6 +13,8 @@
     {{ with ($.Param "subtitle") }}
     <p class="p-subtitle">
       {{ . }}
+      {{ with ($.Param "icon_light") }}<span class="js-theme-toggle theme-toggle light-only" data-theme="t-dark">{{ . }}</span>{{ end }}
+      {{ with ($.Param "icon_dark") }}<span class="js-theme-toggle theme-toggle dark-only" data-theme="t-light">{{ . }}</span>{{ end }}
     </p>
     {{ end }}
   </header>

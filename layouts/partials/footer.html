@@ -22,6 +22,10 @@
           <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
         {{ end }}
       {{ end }}
+      | theme:
+      <span class="js-theme-toggle theme-toggle light-only" data-theme="t-dark">dark / </span>
+      <span class="js-theme-toggle theme-toggle dark-only" data-theme="t-light">light / </span>
+      <span class="js-theme-toggle theme-toggle" data-theme="t-system">reset</span>
     </p>
   </footer>
 

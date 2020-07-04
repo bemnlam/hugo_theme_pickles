@@ -25,18 +25,13 @@ $(() => {
   })
 })
 
+// add color to tag
 $(() => {
-  // console.debug(md5('hello, world'))
   $('article a.c-tag').each(function () {
     var hash = md5($(this).text())
     var h = hash.split('').map(c => c.charCodeAt(0)).reduce((acc, cur) => acc + cur) % 360
     $(this).attr('data-hue', h)
   })
-
-  // $('.c-tag').each(function () {
-  //   const hue = $(this).data('hue')
-  //   set_color($(this), hue, 75, 90)
-  // })
 
   $('.c-tag').on('mouseover', function () {
     const hue = $(this).data('hue')
@@ -49,14 +44,14 @@ $(() => {
   })
 
   $('.c-tag').trigger('mouseleave')
-
+  // border: rgb(137, 139, 245) 1px solid;
+  // border-radius: 5px;
   function setColor ($target, h, l) {
-    // console.debug(`hsl(${h}, 85%, ${l}%)`)
-    $target.css('color', `hsl(${h}, 85%, ${l}%)`)
-    // $target.css('background-color', `hsl(${h + (360 / 2)}, 85%, ${bgl}%)`)
+    $target.css('color', `hsl(${h}, 85%, ${l}%)`).css('border', `hsl(${h}, 85%, ${l}%) 1px solid`)
   }
 })
 
+// add icon to external link
 $(() => {
   $('a[href]').each(function () {
     var thisUrl = $(this).attr('href')
@@ -66,4 +61,23 @@ $(() => {
       $(this).attr('target', '_blank').attr('ref', 'nofollow')
     }
   })
+})
+
+// toggle theme
+$(() => {
+  const setTheme = (name) => { $('html').attr('class', name || 't-system') }
+  const setLocalStorage = (k, v) => { localStorage.setItem(k, v) }
+  const getLocalStorage = (k) => { return localStorage.getItem(k) }
+
+  setTheme(getLocalStorage('theme'))
+
+  $('.js-theme-toggle').on('click', function () {
+    var themename = $(this).data('theme')
+    setTheme(themename)
+    setLocalStorage('theme', themename)
+  })
+  // $('#themeToggle').on('click', function () {
+  //   setLocalStorage('theme', getLocalStorage('theme') === 't-dark' ? 't-light' : 't-dark')
+  //   setTheme()
+  // })
 })
