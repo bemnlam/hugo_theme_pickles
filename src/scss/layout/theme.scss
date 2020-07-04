@@ -1,0 +1,77 @@
+// use #{} in order to render scss vars into css vars
+// https://github.com/sass/libsass/issues/2621
+
+@media (prefers-color-scheme: dark) {
+  .t-system {
+    --bg-color: #{$bg-color__dark};
+    --color-text: #{$color-text__dark};
+    --link-color: #{$link-color__dark};
+    --link-hover: #{$link-hover__dark};
+    --inline-code-bg: #{$inline-code-bg__dark};
+    --inline-code-color: #{$inline-code-color__dark};
+    --block-code-bg: #{$block-code-bg__dark};
+    --related-item-overlay: #{$related-item-overlay__dark};
+    --related-item-overlay-hover: #{$related-item-overlay-hover__dark};
+    --related-item-overlay-bg-color: #{$related-item-overlay-bg-color__dark};
+  }
+  .t-system .light-only {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .t-system {
+    --bg-color: #{$bg-color__light};
+    --color-text: #{$color-text__light};
+    --link-color: #{$link-color__light};
+    --link-hover: #{$link-hover__light};
+    --inline-code-bg: #{$inline-code-bg__light};
+    --inline-code-color: #{$inline-code-color__light};
+    --block-code-bg: #{$block-code-bg__light};
+    --related-item-overlay: #{$related-item-overlay__light};
+    --related-item-overlay-hover: #{$related-item-overlay-hover__light};
+    --related-item-overlay-bg-color: #{$related-item-overlay-bg-color__light};
+  }
+  .t-system .dark-only {
+    display: none;
+  }
+}
+
+.t-light {
+  --bg-color: #{$bg-color__light};
+  --color-text: #{$color-text__light};
+  --link-color: #{$link-color__light};
+  --link-hover: #{$link-hover__light};
+  --inline-code-bg: #{$inline-code-bg__light};
+  --inline-code-color: #{$inline-code-color__light};
+  --block-code-bg: #{$block-code-bg__light};
+  --related-item-overlay: #{$related-item-overlay__light};
+  --related-item-overlay-hover: #{$related-item-overlay-hover__light};
+  --related-item-overlay-bg-color: #{$related-item-overlay-bg-color__light};
+}
+
+.t-dark {
+  --bg-color: #{$bg-color__dark};
+  --color-text: #{$color-text__dark};
+  --link-color: #{$link-color__dark};
+  --link-hover: #{$link-hover__dark};
+  --inline-code-bg: #{$inline-code-bg__dark};
+  --inline-code-color: #{$inline-code-color__dark};
+  --block-code-bg: #{$block-code-bg__dark};
+  --related-item-overlay: #{$related-item-overlay__dark};
+  --related-item-overlay-hover: #{$related-item-overlay-hover__dark};
+  --related-item-overlay-bg-color: #{$related-item-overlay-bg-color__dark};
+}
+
+.theme-toggle {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.t-light .dark-only {
+  display: none;
+}
+
+.t-dark .light-only {
+  display: none;
+}

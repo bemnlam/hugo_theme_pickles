@@ -11,13 +11,13 @@
     width: 30px;
     height: 30px;
     border: 1px solid;
-    border-color: $color-text;
+    border-color: var(--color_text);
     border-radius: 50%;
-    color: $color-text;
+    color: var(--color_text);
     transition: 0.2s;
     &:hover {
-      background: $color-text;
-      color: #fff;
+      background: var(--color_text);
+      color: var(--link-hover);
     }
   }
   &__item {

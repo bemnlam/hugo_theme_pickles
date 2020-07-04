@@ -25,9 +25,9 @@
       height: 100%;
       padding: 8px;
       background-size: cover;
-      background-color: #92c6f2;
+      background-color: var(--link-color);
       background-position: center center;
-      color: #fafafa;
+      color: var(--related-item-overlay-bg-color);
       font-weight: normal;
       font-family: 'Open Sans', sans-serif;
       &::before {
@@ -37,12 +37,12 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.3);
+        background: var(--related-item-overlay);
         transition: 0.1s;
       }
       &:hover {
         &::before {
-          background: rgba(0, 0, 0, 0.6);
+          background: var(--related-item-overlay-hover);
         }
       }
     }

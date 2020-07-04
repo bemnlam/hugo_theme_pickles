@@ -1,6 +1,23 @@
-$bg-color: #fff;
-$color-text: #555;
-$link-color: #337ab7;
-$link-hover: #175081;
-$inline-code-bg: #ffe6e6;
-$inline-code-color: #9d0505;
+$bg-color__light: #fdfdfd;
+$color-text__light: #555;
+$link-color__light: #337ab7;
+$link-hover__light: #175081;
+$inline-code-bg__light: #ffe6e6;
+$inline-code-color__light: #9d0505;
+$block-code-bg__light: #f8f8f8;
+$related-item-overlay__light: rgba(0, 0, 0, 0.3);
+$related-item-overlay-hover__light: rgba(0, 0, 0, 0.6);
+$related-item-overlay-bg-color__light: #fafafa;
+
+
+$bg-color__dark: #14122b;
+$color-text__dark: #808080;
+$link-color__dark: #175081;
+$link-hover__dark: #337ab7;
+$inline-code-bg__dark: #310909;
+$inline-code-color__dark: #a67474;
+$block-code-bg__dark: #201d2d;
+$related-item-overlay__dark: rgba(0, 0, 0, 0.8);
+$related-item-overlay-hover__dark: rgba(0, 0, 0, 0.6);
+$related-item-overlay-bg-color__dark: #afafaf;
+// $related-item-overlay-color-text__dark: adjust(#998099, $lightness: -30%, $alpha: -0.4);

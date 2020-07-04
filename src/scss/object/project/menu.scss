@@ -34,7 +34,7 @@
   }
   &__parent {
     span {
-      color: $link-color;
+      color: var(--link-color);
     }
   }
 }

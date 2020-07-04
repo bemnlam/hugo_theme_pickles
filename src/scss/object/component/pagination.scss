@@ -5,7 +5,8 @@
     padding: 8px 16px;
     transition: 0.2s;
     &:hover {
-      background: #fafafa;
+      background: var(--related-item-overlay);
+      border-radius: 5px;
     }
   }
   &__ctrl {

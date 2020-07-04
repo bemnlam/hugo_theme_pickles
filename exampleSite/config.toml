@@ -1,12 +1,17 @@
-baseurl = "Your site URL"
+# baseurl = "Your site URL"
 languageCode = "en-us"
 Title = "Your site title"
 # Copyright notice. This is displayer in the footer.
 copyright = "&copy; Copyright notice"
 custom_css = "/static/css/custom.css"
+theme = "pickles"
+themesDir = "../../../themes"
 
 # Google Analytics API key.
 googleAnalytics = "Your Google Analytics tracking id"
+
+[markup.goldmark.renderer]
+  unsafe= true
 
 [params]
   paginate = 10
@@ -38,6 +43,8 @@ googleAnalytics = "Your Google Analytics tracking id"
   bio = "Your short bio"
   # Short subtitle/tagline. This is displayed in the header.
   subtitle = "Short subtitle"
+  icon_dark = "🌌"
+  icon_light = "🌅"
   # Logo image. This is displayed ogp image.
   logo = "/path/to/logo"
   favicon = "/path/to/favicon"
