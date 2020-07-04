@@ -2,9 +2,9 @@
   &__title {
     font-size: 2.4rem;
     & a {
-      color: $color-text;
+      color: var(--color_text);
       &:hover {
-        color: $link-hover;
+        color: var(--link-hover);
       }
     }
   }

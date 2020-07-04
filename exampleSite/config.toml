@@ -43,6 +43,8 @@ googleAnalytics = "Your Google Analytics tracking id"
   bio = "Your short bio"
   # Short subtitle/tagline. This is displayed in the header.
   subtitle = "Short subtitle"
+  icon_dark = "🌌"
+  icon_light = "🌅"
   # Logo image. This is displayed ogp image.
   logo = "/path/to/logo"
   favicon = "/path/to/favicon"

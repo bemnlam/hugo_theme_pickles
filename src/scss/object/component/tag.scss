@@ -3,14 +3,15 @@
   margin: 8px 6px 0 0;
   padding: 4px;
   font-size: 1.6rem;
-  color: #555;
+  color: var(--color_text);
+  border-radius: 5px;
   &::before {
     content: "#";
     display: inline-block;
     margin-right: 2px;
     color: currentColor;
   }
-  &:hover {
-    background: #fafafa;
-  }
+  // &:hover {
+  //   background: #fafafa;
+  // }
 }
