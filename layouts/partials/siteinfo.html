@@ -2,7 +2,7 @@
 <aside class="p-author">
   {{ with ($.Param "avatar") }}
   <div class="c-avatar p-author__avatar">
-    <img alt="Author Avatar" src="{{ . }}" />
+    <img loading="lazy" alt="Author Avatar" src="{{ . }}" />
   </div>
   {{ end }}
   {{ if or ( $.Param "author" ) ( $.Param "bio" ) ( $.Param "contact" ) }}
