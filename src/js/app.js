@@ -1,8 +1,20 @@
 import Zooming from 'zooming'
 import md5 from 'js-md5'
+import twemoji from 'twemoji'
 
 const $ = window.jQuery
 require('slick-carousel')
+
+// twemoji
+$(() => {
+  if (twemoji && twemoji.parse) {
+    twemoji.parse(document.body)
+    // twemoji.parse(document.body, {
+    //   folder: 'svg',
+    //   ext: '.svg'
+    // })
+  }
+})
 
 $(() => {
   const zooming = new Zooming({
