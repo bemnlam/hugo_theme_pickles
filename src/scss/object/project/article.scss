@@ -1,4 +1,8 @@
 .p-article {
+  &__figure {
+    text-align: center;
+    margin: 0;
+  }
   &__thumbnail {
     margin-top: 24px;
   }

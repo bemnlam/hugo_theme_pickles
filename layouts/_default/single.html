@@ -21,9 +21,22 @@
   </header>
   {{ with .Params.thumbnail }}
     <img loading="lazy" src="{{ . }}" alt="thumbnail" class="p-article__thumbnail">
+  {{ else }}
+    {{ if .Params.cover_image }}
+    <figure class="p-article__figure">
+      {{ with .Params.cover_image }}
+      <img loading="lazy" src="{{ . }}" alt="thumbnail" class="p-article__thumbnail">
+      {{ end }}
+      {{ if .Params.cover_image_caption }}
+        {{ with .Params.cover_image_caption }}
+        <figcaption>{{ . }}</figcaption>
+        {{ end }}
+      {{ end }}
+    </figure>
+    {{ end }}
   {{ end }}
   <section id="js-article" class="p-article__body">
-    {{ .Content }}
+    {{ replace .Content "../../static/img/" "/img/" | safeHTML }}
   </section>
   <footer>
     {{ with ($.Param "disqus") }}
