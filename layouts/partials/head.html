@@ -53,6 +53,10 @@
   {{- with ($.Param "favicon") }}
   <link rel='icon' type='image/x-icon' href="{{ . | absURL }}?v={{ $.Site.Params.ver }}" />
   {{- end -}}
+  {{- with ($.Param "favicon512") }}
+  <link rel="apple-touch-icon" href="{{ . | absURL }}?v={{ $.Site.Params.ver }}">
+  <link rel="image_src" href="{{ . | absURL }}?v={{ $.Site.Params.ver }}">
+  {{- end -}}
   {{ if eq .RelPermalink "/" }}
   {{ with .OutputFormats.Get "RSS" -}}
   <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
