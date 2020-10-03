@@ -40,7 +40,20 @@
         {{ end }}
         </media:content>
       {{ end }}
-      <description>{{- .Content | html -}}</description>
+      {{ if .Params.cover_image }}
+        <description>
+          {{ "<![CDATA[<img src=\"" | html }}{{ .Params.cover_image }}{{ "\" />" | html }}
+          {{- replace .Content "../../static/img/" "/img/" | html -}}
+          {{ "]]>" | html }}
+        </description>
+      {{ else }}
+        <description>
+          {{ "<![CDATA[" | html }}
+          {{- replace .Content "../../static/img/" "/img/" | html -}}
+          {{ "]]>" | html }}
+        </description>
+      {{ end }}
+      <!-- <description>{{- .Content | html -}}</description> -->
     </item>
     {{ end }}
   </channel>
