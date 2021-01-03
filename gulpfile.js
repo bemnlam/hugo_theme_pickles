@@ -1,4 +1,5 @@
 const gulp = require('gulp')
+const addsrc = require('gulp-add-src');
 const config = require('./config')
 const { src, dest, watch } = require('gulp')
 const del = require('del')
@@ -33,6 +34,7 @@ const minifyImages = () => {
 const compileJavascript = () => {
   return src(config.tasks.webpack.src)
     .pipe(plumber())
+    .pipe(addsrc(...config.tasks.search.src))
     .pipe(webpackStream(webpackConfig, webpack))
     .pipe(dest(config.tasks.webpack.dest))
 }

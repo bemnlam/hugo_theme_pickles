@@ -13,6 +13,7 @@
   "author": "mismith0227",
   "license": "MIT",
   "devDependencies": {
+    "gulp-add-src": "^1.0.0",
     "gulp-sass": "^4.0.2"
   },
   "dependencies": {

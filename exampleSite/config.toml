@@ -49,6 +49,9 @@ googleAnalytics = "Your Google Analytics tracking id"
   logo = "/path/to/logo"
   favicon = "/path/to/favicon"
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 [[menu.main]]
     name = "Blog"
     url = "/"

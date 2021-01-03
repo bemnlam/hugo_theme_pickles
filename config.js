@@ -24,9 +24,12 @@ const tasks = {
     dest: `${config.dirs.dest}/css`
   },
   webpack: {
-    src: `${config.dirs.src}/js/app.js`,
+    src: [`${config.dirs.src}/js/app.js`],
     dest: `${config.dirs.dest}/js`,
     filename: 'bundle.js'
+  },
+  search: {
+    src: [`${config.dirs.src}/js/fuse.js`, `${config.dirs.src}/js/fastsearch.js`],
   },
   watch: {
     css: [`${config.dirs.src}/scss/**/*.css`],

@@ -67,7 +67,7 @@ $(() => {
 $(() => {
   $('a[href]').each(function () {
     var thisUrl = $(this).attr('href')
-    console.debug(thisUrl)
+    // console.debug(thisUrl)
     if ((thisUrl.startsWith('http://') && !thisUrl.startsWith(`http://${window.location.host}`)) ||
         (thisUrl.startsWith('https://') && !thisUrl.startsWith(`https://${window.location.host}`))) {
       $(this).attr('target', '_blank').attr('ref', 'nofollow')
