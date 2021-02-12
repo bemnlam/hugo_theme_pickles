@@ -15,6 +15,7 @@
       {{ . }}
       {{ with ($.Param "icon_light") }}<span class="js-theme-toggle theme-toggle light-only" data-theme="t-dark">{{ . }}</span>{{ end }}
       {{ with ($.Param "icon_dark") }}<span class="js-theme-toggle theme-toggle dark-only" data-theme="t-light">{{ . }}</span>{{ end }}
+      <span class="c-search js-search">🔍</span>
     </p>
     {{ end }}
   </header>
