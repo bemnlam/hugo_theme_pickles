@@ -17,10 +17,18 @@
   <meta property="og:site_name" content="{{ .Site.Title }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
 
-  {{ with .Params.thumbnail | default ($.Param "logo") }}
-  <meta property="og:image" content="{{ . | absURL }}" />
-  <meta name="twitter:image" content="{{ . | absURL }}" />
-  <meta name="twitter:card" content="summary_large_image" />
+  {{ if .Params.cover_image }}
+    {{ with .Params.cover_image }}
+      <meta property="og:image" content="{{ . | absURL }}" />
+      <meta name="twitter:image" content="{{ . | absURL }}" />
+      <meta name="twitter:card" content="summary_large_image" />
+    {{ end }}
+  {{ else }}
+    {{ with .Params.thumbnail | default ($.Param "logo") }}
+    <meta property="og:image" content="{{ . | absURL }}" />
+    <meta name="twitter:image" content="{{ . | absURL }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {{ end }}
   {{ end }}
 
   {{ with ($.Param "twitter") }}
