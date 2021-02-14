@@ -4,8 +4,8 @@
     {{ partial "link.html" . }}
 
     <p class="p-copyright">
-      {{ with .Site.Copyright | safeHTML }}
-        {{ . }}
+      {{ if .Site.Copyright }}
+        {{ .Site.Copyright | safeHTML -}}&nbsp;{{ .Site.LastChange.Format "2006" }}
       {{ else }}
         {{ if ($.Param "author") }}
           {{ if ($.Param "authorwebsite") }}
@@ -27,7 +27,7 @@
       <span class="js-theme-toggle theme-toggle dark-only" data-theme="t-light">light / </span>
       <span class="js-theme-toggle theme-toggle" data-theme="t-system">reset</span>
       |
-      <span class="c-search js-search">seach</span>
+      <span class="c-search js-search">search</span>
     </p>
   </footer>
 
